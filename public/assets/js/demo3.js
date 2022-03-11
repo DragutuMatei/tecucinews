@@ -7,7 +7,9 @@
  * 
  * Copyright 2017, Codrops
  * http://www.codrops.com
+ * 
  */
+window.addEventListener('load', (event) => {
 {
     // From https://davidwalsh.name/javascript-debounce-function.
 	function debounce(func, wait, immediate) {
@@ -24,7 +26,7 @@
 			if (callNow) func.apply(context, args);
 		};
     };
-    
+
     class Slideshow {
         constructor(el) {
             this.DOM = {};
@@ -44,16 +46,18 @@
             }
             this.init();
         }
-        init() {
-            this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slides > .slide'));
-            this.slidesTotal = this.DOM.slides.length;
-            this.DOM.nav = this.DOM.el.querySelector('.slidenav');
-            this.DOM.nextCtrl = this.DOM.nav.querySelector('.slidenav__item--next');
-            this.DOM.prevCtrl = this.DOM.nav.querySelector('.slidenav__item--prev');
-            this.current = 0;
-            this.createFrame(); 
-            this.initEvents();
-        }
+
+            init() {
+                this.DOM.slides = Array.from(this.DOM.el.querySelectorAll('.slides > .slide'));
+                this.slidesTotal = this.DOM.slides.length;
+                this.DOM.nav = this.DOM.el.querySelector('.slidenav');
+                this.DOM.nextCtrl = this.DOM.nav.querySelector('.slidenav__item--next');
+                this.DOM.prevCtrl = this.DOM.nav.querySelector('.slidenav__item--prev');
+                this.current = 0;
+                this.createFrame(); 
+                this.initEvents();
+            }
+        
         createFrame() {
             this.rect = this.DOM.el.getBoundingClientRect();
             this.frameSize = this.rect.width/12;
@@ -230,4 +234,4 @@
 
     new Slideshow(document.querySelector('.slideshow'));
     imagesLoaded('.slide__img', { background: true }, () => document.body.classList.remove('loading'));
-};
+};});
