@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>About Us - Tecuci News</title>
+    <title>Login - Tecuci News</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -35,42 +35,29 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Acasa</a></li>
                     <li class="nav-item"><a class="nav-link" href="news.html">news</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="page">
-        <section class="clean-block about-us">
+    <main class="page login-page">
+        <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">About Us</h2>
+                    <h2 class="text-info">Log In</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/87099114_2461872530734670_4855386551611293696_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=09cbfe&amp;_nc_eui2=AeGbn9D4PVCZa-JoIuKJ0iqZzku3L-uTrpTOS7cv65OulLafr7RUNprDymV0T9x14jqpgTS6DXg35SxlwZFreVfo&amp;_nc_ohc=Pv4iXKcfzZ4AX8WZzA6&amp;_nc_ht=scontent-otp1-1.xx&amp;oh=00_AT9IB7IqnnlwBTwvmMzJLe3m78y83XwA3qWhsYr4I2VPMQ&amp;oe=624B5CA6">
-                            <div class="card-body info">
-                                <h4 class="card-title">Dragutu Matei</h4>
-                                <p class="card-text">FUGA DUPA EI</p>
-                                <div class="icons"><a href="https://www.facebook.com/dragutu.matei"><i class="icon-social-facebook"></i></a><a href="https://www.instagram.com/dragutumatei/"><i class="icon-social-instagram"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="https://scontent-otp1-1.xx.fbcdn.net/v/t1.6435-9/86695369_2663907933657090_2295697635035578368_n.jpg?_nc_cat=105&amp;ccb=1-5&amp;_nc_sid=09cbfe&amp;_nc_eui2=AeFoBQlR7xQ29Gh8dhY_xJHSxZFpGbXA2ZPFkWkZtcDZk4kKZ_gzTK28W9dVrFbj4gA1ai7mQCrcbK3NZ5j1whxR&amp;_nc_ohc=4vIzpYzVVIQAX8bluM8&amp;_nc_ht=scontent-otp1-1.xx&amp;oh=00_AT-XlrOhVnxFt6Ku5uD-WqWcFtcKStLZiftOLcndPX65yQ&amp;oe=624BC4F3">
-                            <div class="card-body info">
-                                <h4 class="card-title">Hanga Mihail</h4>
-                                <p class="card-text">ceva text</p>
-                                <div class="icons"><a href="https://www.facebook.com/hanga.mihail"><i class="icon-social-facebook"></i></a><a href="https://www.instagram.com/mihail.zuzu/"><i class="icon-social-instagram"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <form>
+                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
+                    <div class="mb-3"><label class="form-label" for="password">Password</label><input class="form-control" type="password" id="password"></div>
+                    <div class="mb-3">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
+                    </div><button class="btn btn-primary" type="submit">Log In</button>
+                </form>
             </div>
         </section>
     </main>
