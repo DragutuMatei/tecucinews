@@ -1,8 +1,17 @@
-import React from "react";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-expressions */
+import React from 'react';
 import ArticolElement from "../components/ArticolElement";
 
+
 function News() {
+
+
+
+  
+
   return (
+    <>
     <main className="page pricing-table-page">
       <section className="article-list">
         <div className="container">
@@ -35,30 +44,51 @@ function News() {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-lg-12 d-flex justify-content-center">
-                  <ul id="portfolio-flters">
-                    <li className="filter-active" data-filter="*">
-                      all
-                    </li>
-                    <li data-filter=".filter-3d">Local</li>
-                    <li data-filter=".filter-logo">Covid</li>
-                    <li data-filter=".filter-web">Judet</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="row portfolio-container justify-content-center row-cols-lg-2">
-                <ArticolElement h4={"nush"} p={"idk"} />
-                <ArticolElement h4={"nush"} p={"idk"} />
-                <ArticolElement h4={"nush"} p={"idk"} />
-                <ArticolElement h4={"nush"} p={"idk"} />
-                <ArticolElement h4={"nush"} p={"idk"} />
+              <div className="container">
+                      <div className="container">
+                          <div className="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+                              <h1 className="gallery-title">Ultimele stiri sa ma bata tata</h1>
+                          </div>
+                          <div align="center">
+                              <button className="btn btn-default filter-button" data-filter="all">All</button>
+                              <button className="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
+                              <button className="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
+                              <button className="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
+                              <button className="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+                          </div>
+                          <br/>
+                          <div className="row">
+                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"sprinkle"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"sprinkle"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"spray"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"irrigation"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"irrigation"} img={"https://via.placeholder.com/365"}  />
+
+                          </div>
+                      </div>
               </div>
             </div>
           </section>
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+    </>
   );
 }
 

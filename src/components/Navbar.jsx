@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar">
       <div className="container">
-        <Link className="navbar-brand logo" to="#">
+        <Link className="navbar-brand logo" to="/">
           Tecuci News
         </Link>
         <button
@@ -19,7 +19,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navcol-11">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item item">
-              <Link className="nav-link active" to="/">
+              <Link className="nav-link" to="/">
                 HOME
               </Link>
             </li>

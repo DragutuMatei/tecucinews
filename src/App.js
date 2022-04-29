@@ -7,6 +7,8 @@ import Articol from "./pages/Articol";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +21,7 @@ function App() {
         <Route path="/article" element={<Articol />} />
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
 

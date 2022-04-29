@@ -1,8 +1,14 @@
-import React from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
+import React from 'react';
 import { Link } from "react-router-dom";
 
-function Home() {
-  return (
+function Home() { 
+
+
+  
+
+  return ( 
     <>
       <main className="page landing-page">
         <section className="demo-3 loading">
@@ -12,7 +18,8 @@ function Home() {
               <div className="slide slide--current">
                 <div
                   className="slide__img"
-                  style={{ backgroundImage: "assets/img/slide-sus/17.jpg" }}
+                  style={{ 
+                    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/img/slide-sus/17.jpg'})`}}
                 ></div>
                 <h2 className="slide__title">Tecuci News</h2>
                 <p className="slide__desc">Text1 in slide</p>
@@ -23,7 +30,8 @@ function Home() {
               <div className="slide">
                 <div
                   className="slide__img"
-                  style={{ backgroundImage: "assets/img/slide-sus/18.jpg" }}
+                  style={{ 
+                    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/img/slide-sus/18.jpg'})`}}
                 ></div>
                 <h2 className="slide__title">Tecuci News</h2>
                 <p className="slide__desc">Text2 in slide</p>
@@ -34,7 +42,8 @@ function Home() {
               <div className="slide">
                 <div
                   className="slide__img"
-                  style={{ backgroundImage: "assets/img/slide-sus/19.jpg" }}
+                  style={{ 
+                    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/img/slide-sus/19.jpg'})`}}
                 ></div>
                 <h2 className="slide__title">Tecuci News</h2>
                 <p className="slide__desc">Text3 in slide</p>
@@ -45,7 +54,8 @@ function Home() {
               <div className="slide">
                 <div
                   className="slide__img"
-                  style={{ backgroundImage: "assets/img/slide-sus/20.jpg" }}
+                  style={{ 
+                    backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/img/slide-sus/20.jpg'})`}}
                 ></div>
                 <h2 className="slide__title">Tecuci News</h2>
                 <p className="slide__desc">Text4 in slide</p>
@@ -246,16 +256,7 @@ function Home() {
             </div>
           </div>
         </section>
-      </main>
-      <script src="./assets/bootstrap/js/bootstrap.min.js?h=5488c86a1260428f0c13c0f8fb06bf6a"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-      <script src="./assets/js/vanilla-zoom.js?h=6a37ea9c996b05f763161c73127d66bc"></script>
-      <script src="./assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
-      <script src="./assets/js/anime.min.js?h=7b7d9c2344ec7bb776c95e6d9144470f"></script>
-      <script src="./assets/js/demo.js?h=7d016c1331724bb00e48e7ca1abccece"></script>
-      <script src="./assets/js/demo3.js?h=157ba8265b3fc7352d98a09b3c69f84d"></script>
-      <script src="./assets/js/imagesloaded.pkgd.min.js?h=1a4b132632e8444a9d67a33668e195a5"></script>{" "}
-    </>
+      </main>   </>
   );
 }
 
