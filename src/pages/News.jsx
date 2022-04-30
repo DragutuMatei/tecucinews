@@ -67,7 +67,7 @@ class News extends Component {
                               <button className="btn btn-default filter-button" data-filter="National">National</button>
                           </div>
                           <br/>
-                          <div className="row">
+                          <div className="row portfolio-container justify-content-center row-cols-lg-2">
                           <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
                           <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
                           <ArticolElement filter={"local"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
@@ -77,7 +77,7 @@ class News extends Component {
                           <ArticolElement filter={"National"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
                           <ArticolElement filter={"National"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
 
-                          </div>
+                          </div> 
                       </div>
               </div>
             </div>

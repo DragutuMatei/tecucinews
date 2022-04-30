@@ -7,16 +7,16 @@ function ArticolElement({filter, img ,titlu, descriere}) {
 
 
   let imagine = img;
-   let bag  = 'gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ';
+   let bag  = 'col portfolio-item filter ';
    let pula  = filter;
-
+  let in_ = ' col-lg-3 col-md-4 col-sm-6 px-2 mb-4';
   
-  let ma_ta = bag + pula;
+  let ma_ta = bag + pula + in_;
 
   return (
     <div className={ma_ta } >
       <a href="blog-post.html">
-        <img src={imagine} className="img-responsive" />
+        <img src={imagine} className="img-fluid rounded-1" />
         <h4>{titlu}</h4>
         <p>{descriere}</p>
       </a>
