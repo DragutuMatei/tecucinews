@@ -1,18 +1,28 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
-import React from 'react';
+import React, { Component } from 'react';
 import ArticolElement from "../components/ArticolElement";
 
-
-function News() {
-
+class News extends Component { 
 
 
-  
+  componentDidMount() {
+    const scriptTag1 = document.createElement("script");
+
+    scriptTag1.src = "./assets/js/portofoliu-fizica.js";
+
+    scriptTag1.async = true;
+
+    document.body.appendChild(scriptTag1);
+
+}
+
+
+  render() {
 
   return (
     <>
-    <main className="page pricing-table-page">
+      <main className="page pricing-table-page">
       <section className="article-list">
         <div className="container">
           <section id="portfolio" className="portfolio">
@@ -51,21 +61,21 @@ function News() {
                           </div>
                           <div align="center">
                               <button className="btn btn-default filter-button" data-filter="all">All</button>
-                              <button className="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-                              <button className="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-                              <button className="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-                              <button className="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+                              <button className="btn btn-default filter-button" data-filter="covid">Covid-19</button>
+                              <button className="btn btn-default filter-button" data-filter="local">Local</button>
+                              <button className="btn btn-default filter-button" data-filter="judet">Judet</button>
+                              <button className="btn btn-default filter-button" data-filter="National">National</button>
                           </div>
                           <br/>
                           <div className="row">
-                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"sprinkle"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"sprinkle"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"spray"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"hdpe"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"irrigation"} img={"https://via.placeholder.com/365"}  />
-                          <ArticolElement filter={"irrigation"} img={"https://via.placeholder.com/365"}  />
+                          <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"local"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"local"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"judet"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"National"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
+                          <ArticolElement filter={"National"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
 
                           </div>
                       </div>
@@ -85,11 +95,10 @@ function News() {
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-
+    
 
     </>
   );
 }
-
+}
 export default News;

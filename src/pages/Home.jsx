@@ -1,13 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-function Home() { 
 
 
-  
 
+class Home extends Component { 
+
+
+  componentDidMount() {
+    const scriptTag1 = document.createElement("script");
+    const scriptTag2 = document.createElement("script");
+    scriptTag1.src = "./assets/js/demo.min.js";
+    scriptTag2.src = "./assets/js/demo3.min.js";
+    scriptTag1.defer = true;
+    scriptTag2.defer = true;
+    document.body.appendChild(scriptTag1);
+    document.body.appendChild(scriptTag2);
+}
+
+
+  render() {
   return ( 
     <>
       <main className="page landing-page">
@@ -256,8 +270,11 @@ function Home() {
             </div>
           </div>
         </section>
-      </main>   </>
+      </main>
+      
+         </>
   );
+  }
 }
 
 export default Home;

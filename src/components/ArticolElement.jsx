@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-function ArticolElement({filter, img }) {
+function ArticolElement({filter, img ,titlu, descriere}) {
 
 
   let imagine = img;
@@ -17,8 +17,8 @@ function ArticolElement({filter, img }) {
     <div className={ma_ta } >
       <a href="blog-post.html">
         <img src={imagine} className="img-responsive" />
-        <h4>test</h4>
-        <p>test</p>
+        <h4>{titlu}</h4>
+        <p>{descriere}</p>
       </a>
     </div> 
   );
