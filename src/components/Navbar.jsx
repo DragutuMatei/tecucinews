@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Api } from "../utils/Api";
 import { Constants } from "../utils/Constants";
 
-function Navbar({ setUser }) {
+function Navbar({ setUser, user }) {
   const logout = () => {
     new Api().post(Constants.AUTH_PREFIX + "/signout").then((res) => {
       console.log(res.data);
@@ -56,10 +56,23 @@ function Navbar({ setUser }) {
               <Link className="nav-link" to="contact">
                 CONTACT US
               </Link>
-            </li>
+            </li>{" "}
             <li className="nav-item item">
-              <button onClick={logout}>Logout</button>
+              <Link className="nav-link" to="adminfrtlemeleu">
+                Admin
+              </Link>
             </li>
+            {user.id != "" && (
+              <>
+                <li className="nav-item item">
+                  <h5 style={{ color: "white" }}> {user.username}</h5>
+                  <h5 style={{ color: "white" }}> {user.roles[0]}</h5>
+                </li>
+                <li className="nav-item item">
+                  <button onClick={logout}>Logout</button>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

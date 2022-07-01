@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 // import About from "./pages/About";
 import News from "./pages/News";
+import Admin from "./pages/Admin";
 import Contact from "./pages/Contact";
 import Articol from "./pages/Articol";
 import Navbar from "./components/Navbar";
@@ -33,8 +34,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar setUser={setUser} />
+      <Navbar setUser={setUser} user={user} />
       <Routes>
+        <Route path="/adminfrtlemeleu" element={<Admin />} />
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
