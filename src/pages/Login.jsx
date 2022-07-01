@@ -1,43 +1,81 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Api } from "../utils/Api";
+import { Constants } from "../utils/Constants";
 
-function Login() {
+function Login({setUser}) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const login = () => {
+    new Api()
+      .post(Constants.AUTH_PREFIX + "/login", {
+        username,
+        password,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data);
+      });
+  };
+
   return (
-    <main class="page login-page">
-      <section class="clean-block clean-form dark">
-        <div class="container">
-          <div class="block-heading">
-            <h2 class="text-info">Log In</h2>
+    <main className="page login-page">
+      <section className="clean-block clean-form dark">
+        <div className="container">
+          <div className="block-heading">
+            <h2 className="text-info">Log In</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam
               urna, dignissim nec auctor in, mattis vitae leo.
             </p>
           </div>
-          <form>
-            <div class="mb-3">
-              <label class="form-label" for="email">Email</label
-              ><input class="form-control item" type="email" id="email" />
+          <div>
+            <div className="mb-3">
+              <label className="form-label" for="username">
+                Username
+              </label>
+              <input
+                className="form-control item"
+                type="text"
+                id="username"
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
+              />
             </div>
-            <div class="mb-3">
-              <label class="form-label" for="password">Password</label
-              ><input class="form-control" type="password" id="password" />
+            <div className="mb-3">
+              <label className="form-label" for="password">
+                Password
+              </label>
+              <input
+                className="form-control"
+                type="password"
+                id="password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+              />
             </div>
-            <div class="mb-3">
-              <div class="form-check">
+            <div className="mb-3">
+              <div className="form-check">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="checkbox"
-                /><label class="form-check-label" for="checkbox"
-                  >Remember me</label
-                >
+                />
+                <label className="form-check-label" for="checkbox">
+                  Remember me
+                </label>
               </div>
             </div>
-            <button class="btn btn-primary" type="submit">Log In</button>
-          </form>
+            <button className="btn btn-primary" onClick={login}>
+              Log In
+            </button>
+          </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
- 
-export default Login
+
+export default Login;

@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Api } from "../utils/Api";
+import { Constants } from "../utils/Constants";
 
 function Navbar() {
+  const logout = () => {
+    new Api().post(Constants.AUTH_PREFIX + "/signout").then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar">
       <div className="container">
@@ -42,6 +50,9 @@ function Navbar() {
               <Link className="nav-link" to="contact">
                 CONTACT US
               </Link>
+            </li>
+            <li className="nav-item item">
+              <button onClick={logout}>Logout</button>
             </li>
           </ul>
         </div>

@@ -22,29 +22,29 @@ class News extends Component {
 
   return (
     <>
-      <main className="page pricing-table-page">
-      <section className="article-list">
-        <div className="container">
-          <section id="portfolio" className="portfolio">
-            <div className="container">
-              <div className="section-title pt-4 pb-4">
+      <main classNameName="page pricing-table-page">
+      <section classNameName="article-list">
+        <div classNameName="container">
+          <section id="portfolio" classNameName="portfolio">
+            <div classNameName="container">
+              <div classNameName="section-title pt-4 pb-4">
                 <h2>
                   <strong>Ultimele stiri</strong>
                   <br />
                 </h2>
-                <div className="col-md-10 offset-md-1">
-                  <div className="card m-auto" style={{ maxWidth: "850px" }}>
-                    <div className="card-body">
-                      <form className="d-flex align-items-center">
-                        <i className="fas fa-search d-none d-sm-block h4 text-body m-0"></i>
+                <div classNameName="col-md-10 offset-md-1">
+                  <div classNameName="card m-auto" style={{ maxWidth: "850px" }}>
+                    <div classNameName="card-body">
+                      <form classNameName="d-flex align-items-center">
+                        <i classNameName="fas fa-search d-none d-sm-block h4 text-body m-0"></i>
                         <input
-                          className="form-control form-control-lg flex-shrink-1 form-control-borderless"
+                          classNameName="form-control form-control-lg flex-shrink-1 form-control-borderless"
                           type="search"
                           placeholder="Cauta stirea ta preferata"
                           name="searchbar"
                         />
                         <button
-                          className="btn btn-success btn-lg"
+                          classNameName="btn btn-success btn-lg"
                           type="submit"
                         >
                           Search
@@ -54,20 +54,20 @@ class News extends Component {
                   </div>
                 </div>
               </div>
-              <div className="container">
-                      <div className="container">
-                          <div className="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                              <h1 className="gallery-title">Ultimele stiri sa ma bata tata</h1>
+              <div classNameName="container">
+                      <div classNameName="container">
+                          <div classNameName="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto">
+                              <h1 classNameName="gallery-title">Ultimele stiri sa ma bata tata</h1>
                           </div>
                           <div align="center">
-                              <button className="btn btn-default filter-button" data-filter="all">All</button>
-                              <button className="btn btn-default filter-button" data-filter="covid">Covid-19</button>
-                              <button className="btn btn-default filter-button" data-filter="local">Local</button>
-                              <button className="btn btn-default filter-button" data-filter="judet">Judet</button>
-                              <button className="btn btn-default filter-button" data-filter="National">National</button>
+                              <button classNameName="btn btn-default filter-button" data-filter="all">All</button>
+                              <button classNameName="btn btn-default filter-button" data-filter="covid">Covid-19</button>
+                              <button classNameName="btn btn-default filter-button" data-filter="local">Local</button>
+                              <button classNameName="btn btn-default filter-button" data-filter="judet">Judet</button>
+                              <button classNameName="btn btn-default filter-button" data-filter="National">National</button>
                           </div>
                           <br/>
-                          <div className="row portfolio-container justify-content-center row-cols-lg-2">
+                          <div classNameName="row portfolio-container justify-content-center row-cols-lg-2">
                           <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
                           <ArticolElement filter={"covid"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
                           <ArticolElement filter={"local"} img={"https://via.placeholder.com/365"} titlu="test-titlu" descriere="test-descriere" />
