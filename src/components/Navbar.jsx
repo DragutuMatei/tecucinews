@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import { Api } from "../utils/Api";
 import { Constants } from "../utils/Constants";
 
-function Navbar() {
+function Navbar({ setUser }) {
   const logout = () => {
     new Api().post(Constants.AUTH_PREFIX + "/signout").then((res) => {
-      console.log(res);
+      console.log(res.data);
+      setUser({
+        id: "",
+        email: "",
+        username: "",
+        roles: [],
+      });
     });
   };
 

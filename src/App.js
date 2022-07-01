@@ -33,19 +33,26 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/article" element={<Articol />} />
-        <Route path="/login" element={<Login setUser={setUser} />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={<Login user={user} setUser={setUser} />}
+        />
+        <Route path="/register" element={<Register user={user} />} />
       </Routes>
-      
-      <button onClick={() => {
+
+      <button
+        onClick={() => {
           console.log(user);
-        }}>check user</button>
+        }}
+      >
+        check user
+      </button>
       <Footer />
     </BrowserRouter>
   );

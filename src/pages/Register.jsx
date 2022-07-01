@@ -2,24 +2,30 @@ import React from "react";
 import { useState } from "react";
 import { Api } from "../utils/Api";
 import { Constants } from "../utils/Constants";
+import { Navigate } from "react-router-dom";
 
-function Register() {
+function Register({ user }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const register = () => {
-    new Api().post(Constants.AUTH_PREFIX + "/register", {
-      username: name,
-      email: email,
-      password: password
-    }).then((res) => {
-      alert("te-ai inregistrat");
-    });
+    new Api()
+      .post(Constants.AUTH_PREFIX + "/register", {
+        username: name,
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        alert("te-ai inregistrat");
+      });
   };
+
+  user && <Navigate to="/" />;
 
   return (
     <main className="page registration-page">
+      {user.id != "" && <Navigate to="/" />}
       <section className="clean-block clean-form dark">
         <div className="container">
           <div className="block-heading">
@@ -56,7 +62,7 @@ function Register() {
                 }}
               />
             </div>
-            
+
             <div className="mb-3">
               <label className="form-label" for="password">
                 Password

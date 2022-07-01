@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Api } from "../utils/Api";
 import { Constants } from "../utils/Constants";
+import { Navigate } from "react-router-dom";
+import { useEffect } from "react";
 
-function Login({setUser}) {
+function Login({ setUser, user }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,8 +20,12 @@ function Login({setUser}) {
       });
   };
 
+
   return (
     <main className="page login-page">
+      {
+        user.id != "" && <Navigate to="/" />
+      }
       <section className="clean-block clean-form dark">
         <div className="container">
           <div className="block-heading">
